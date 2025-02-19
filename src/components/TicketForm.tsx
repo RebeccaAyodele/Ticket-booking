@@ -149,6 +149,7 @@ const Step3 = ({ step, setStep }) => {
       <h1>Your Ticket is Booked</h1>
       <p>Check your email for a copy or you can <strong>download</strong></p>
       <Subtract />
+      <p>I'm trying to push my code to the repository</p>
     </div>
   )
 }
