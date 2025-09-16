@@ -26,15 +26,15 @@ const TicketOptions = () => {
 
     return (
         <div>
-            <div className="flex w-full items-center justify-center gap-x-8">
+            <div className="flex flex-col md:flex-row w-full items-center justify-center gap-8">
                 {ticketTypes?.map((ticket, i) => (
                     <div
                         key={i}
                         onClick={() => setSelectedType(ticket)}
-                        className={`${selectedType?.id === ticket?.id ? "bg-[#12464E]" : ""} border-rounded w-[158px] h-[110px]  flex aspect-square flex-col justify-center rounded-xl outline outline-3 outline-[#197686] p-4`}
+                        className={`${selectedType?.id === ticket?.id ? "bg-[#12464E]" : ""} border-rounded md:w-[180px] h-[110px] w-full flex aspect-square flex-col justify-center rounded-xl outline outline-3 outline-[#197686] px-2 py-4`}
                     >
-                        <p className="text-lg pb-3 font-bold text-white">{ticket.price}</p>
-                        <p className="text-xs pb-2 font-normal text-white">{ticket.name}</p>
+                        <p className="text-2xl pb-3 font-bold text-white">{ticket.price}</p>
+                        <p className="pb-2 font-normal text-white">{ticket.name}</p>
                         <p className="text-xs font-thin text-white">22/10</p>
                     </div>
                 ))}
