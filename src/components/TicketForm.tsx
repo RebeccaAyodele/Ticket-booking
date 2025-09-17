@@ -206,10 +206,10 @@ const Step2 = ({
 
   return (
     <div className="bg-[#052228] p-6 mt-8 rounded-3xl outline outline-1 outline-[#0E464F]">
-      <div className="bg-[#092329ed] h-[265px] outline outline-1 rounded-2xl outline-[#0E464F] py-10 pb-10">
+      <div className="bg-[#092329ed] md:h-[265px] outline outline-1 rounded-2xl outline-[#0E464F] py-10 pb-10">
         <p className="mb-4 ml-6 font-normal">Upload Profile Photo</p>
-        <div className="bg-[#011d23] h-[75%] w-[90%] mx-auto relative">
-          <div className="bg-[#0E464F] h-[150%] w-[35%] rounded-xl outline outline-2 outline-[#24A0B5] absolute left-[32%] bottom-[-25%]  cursor-pointer hover:bg-[#07373F]">
+        <div className="md:bg-[#011d23] bg-inherit h-[75%] w-[90%] md:flex mx-auto relative">
+          <div className="bg-[#0E464F] md:h-[150%] mx-auto md:w-[35%] w-[80%] rounded-xl outline outline-2 outline-[#24A0B5] md:absolute left-[32%] bottom-[-25%]  cursor-pointer hover:bg-[#07373F]">
             {imageUrl ? (
               <img
                 src={imageUrl}
@@ -311,7 +311,6 @@ const Step3 = ({ setStep, imageUrl, name, email, ticketType }) => {
       </p>
 
       <div className="relative">
-        {/* SVG as background */}
         <img
           src={ticketSvg}
           alt="Ticket Background"
@@ -319,18 +318,18 @@ const Step3 = ({ setStep, imageUrl, name, email, ticketType }) => {
         />
 
         {/* Text on top of it */}
-        <div className="absolute top-0 left-1/4 h-full ml-6 flex flex-col items-center text-white outline-1 outline-[#24A0B5]">
+        <div className="absolute top-8 left-[24%] ml-6 flex flex-col py-4 w-[45%] h-[73%] mx-auto items-center text-white outline outline-2 outline-[#24A0B5] rounded-xl">
           <h1 className="font-road font-bold text-3xl py-2">
-            Techember Fest '25
+            Techember Fest "22
           </h1>
           <p>📍 04 Rumens road, Ikoyi, Lagos</p>
-          <p className="mt-4">📅 March 15, 2025 | 7:00 PM</p>
-          <div className="displayed w-[200px] h-[200px] bg-white">
+          <p>📅 March 15, 2025 | 7:00 PM</p>
+          <div className="displayed w-[200px] h-[200px]">
             {imageUrl ? (
               <img
                 src={imageUrl}
                 alt="Uploaded Profile"
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full rounded-xl outline outline-3 outline-[#24A0B5]"
               />
             ) : (
               <p className="text-black text-sm">No image uploaded</p>
