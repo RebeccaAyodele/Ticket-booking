@@ -1,6 +1,16 @@
-import { useState } from "react";
+export type TicketType = {
+  id: number;
+  price: string;
+  name: string;
+};
 
-const TicketOptions = () => {
+type TicketOptionsProps = {
+  selectedType: TicketType | null;
+  setSelectedType: (ticket: TicketType) => void;
+};
+
+
+const TicketOptions: React.FC<TicketOptionsProps> = ({ selectedType, setSelectedType }) => {
 
 
 	const ticketTypes = [
@@ -21,7 +31,6 @@ const TicketOptions = () => {
 		}
 	]
 
-	const [selectedType, setSelectedType] = useState(ticketTypes[0])
 
 
     return (
