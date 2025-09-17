@@ -14,6 +14,7 @@ const TicketForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [request, setRequest] = useState("");
 
   return (
     <div className="w-[90%] md:w-[50%] mt-[4%] outline outline-[#0E464F] rounded-3xl outline-1 bg-[#052228]">
@@ -42,6 +43,8 @@ const TicketForm = () => {
             email={email}
             setEmail={setEmail}
             imageUrl={imageUrl}
+            request={request}
+            setRequest={setRequest}
           />
         )}
 
@@ -52,6 +55,8 @@ const TicketForm = () => {
             name={name}
             email={email}
             ticketType={ticketType}
+            ticketNumber={ticketNumber}
+            request={request}
           />
         )}
       </div>
@@ -154,6 +159,8 @@ const Step2 = ({
   email,
   setEmail,
   imageUrl,
+  request,
+  setRequest
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
@@ -271,6 +278,8 @@ const Step2 = ({
             cols={80}
             rows={5}
             placeholder="Textarea"
+            value={request}
+            onChange={(e) => setRequest(e.target.value)}
             className="bg-[#052228] rounded w-[100%] mb-4 p-4 outline outline-1 outline-[#0E464F]"
           ></textarea>
         </fieldset>
@@ -299,7 +308,7 @@ const Step2 = ({
   );
 };
 
-const Step3 = ({ setStep, imageUrl, name, email, ticketType }) => {
+const Step3 = ({ setStep, imageUrl, name, email, ticketType, ticketNumber, request }) => {
   console.log("Step3 received imageUrl:", imageUrl);
   return (
     <div className="p-6 mt-8  h-[80%]">
@@ -318,36 +327,52 @@ const Step3 = ({ setStep, imageUrl, name, email, ticketType }) => {
         />
 
         {/* Text on top of it */}
-        <div className="absolute top-8 left-[24%] ml-6 flex flex-col py-4 w-[45%] h-[73%] mx-auto items-center text-white outline outline-2 outline-[#24A0B5] rounded-xl">
+        <div className="absolute top-8 md:left-[24%] left-[10%] ml-6 flex flex-col py-4 md:w-[45%] w-[70%] h-[73%] mx-auto items-center text-white outline outline-2 outline-[#24A0B5] rounded-xl">
           <h1 className="font-road font-bold text-3xl py-2">
             Techember Fest "22
           </h1>
           <p>📍 04 Rumens road, Ikoyi, Lagos</p>
           <p>📅 March 15, 2025 | 7:00 PM</p>
-          <div className="displayed w-[200px] h-[200px]">
+          <div className="displayed w-[200px] h-[200px] my-4">
             {imageUrl ? (
               <img
                 src={imageUrl}
                 alt="Uploaded Profile"
-                className="object-cover w-full h-full rounded-xl outline outline-3 outline-[#24A0B5]"
+                className="object-cover w-full h-full rounded-xl outline outline-3  outline-[#24A0B5]"
               />
             ) : (
               <p className="text-black text-sm">No image uploaded</p>
             )}
           </div>
-          <div>
-            <p className="name">
-              <strong>Name:</strong> {name || "N/A"}
-            </p>
-            <p className="email">
-              <strong>Email:</strong> {email || "N/A"}
-            </p>
-            <p className="ticket-type">
-              <strong>Ticket Type:</strong> {ticketType?.name || "N/A"}
-            </p>
-            <p className="ticket-price">
-              <strong>Price:</strong> {ticketType?.price || "N/A"}
-            </p>
+          <div className="m-2 bg-[#08343C] rounded-2xl">
+            <table className="table-fixed border-collapse border border-[#133D44] w-full text-left">
+            <tbody>
+              <tr>
+                <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
+                  <p className="text-white/30 text-sm">Name</p>
+                  <span>{name || "N/A"}</span>
+                </td>
+                <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
+                  <p className="text-white/30 text-sm">Email</p>
+                  <span className=" text-wrap">{email || "N/A"}</span>
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
+                  <p className="text-white/30 text-sm">Ticket for :</p>
+                  <span>{ticketNumber || "N/A"}</span>
+                </td>
+                <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
+                  <p className="text-white/30 text-sm">Price</p>
+                  <span>{ticketType?.price || "N/A"}</span>
+                </td>
+              </tr>
+              <tr className="border border-[#133D44] font-semibold px-2 py-3 w-full">
+                <p className="text-white/30 text-sm">Special Request</p>
+                  <span className="text-xs">{request || "N/A"}</span>
+              </tr>
+            </tbody>
+          </table>
           </div>
         </div>
       </div>
