@@ -247,6 +247,9 @@ const Step3 = ({ setStep, imageUrl }) => {
               <p className="text-black text-sm">No image uploaded</p>
             )}
           </div>
+          <div>
+            <table></table>
+          </div>
         </div>
       </div>
       <div className="mt-6 flex flex-row justify-between gap-x-2">
