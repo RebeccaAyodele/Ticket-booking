@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="w-[90%] md:w-[80%] h-16 flex justify-between rounded-[12px] outline outline-1 outline-[#197686] bg-[#05252c] mx-auto px-[12px] py-[16px]">
+    <nav className="w-[93%] md:w-[80%] h-16 flex justify-between rounded-[12px] outline outline-1 outline-[#197686] bg-[#05252c] mx-auto px-[12px] py-[16px]">
       <div className="flex justify-between gap-4 my-auto">
         <Logo />
         <Ticz />

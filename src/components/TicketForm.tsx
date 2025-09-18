@@ -62,7 +62,7 @@ const TicketForm = () => {
   };
 
   return (
-    <div className="w-[90%] md:w-[50%] mt-[4%] outline outline-[#197686] rounded-3xl outline-1 bg-[#052228]">
+    <div className="w-[93%] md:w-[50%] mt-[4%] outline outline-[#197686] rounded-3xl outline-1 bg-[#052228]">
       <div className="text-[#ffffff] font-light p-[5%]">
         <div className="flex justify-between">
           <h1 className="font-times text-2xl">{selectedMenu[currentStep]}</h1>
@@ -388,15 +388,15 @@ const Step3 = ({
     link.click();
   };
   return (
-    <div className="p-6 mt-8 h-[80%]">
-      <h1 className="text-3xl font-semibold text-center">
+    <div className="md:p-6 mt-8">
+      <h1 className="md:text-3xl text-xl font-semibold text-center">
         Your Ticket is Booked!
       </h1>
-      <p className="text-center my-4">
+      <p className="text-center md:text-base text-xs md:my-4 mb-4">
         Check your email for a copy or you can <strong>download</strong>
       </p>
 
-      <div className="relative overflow-hidden min-h-screen">
+      <div className="relative min-h-screen w-full">
         <img
           src={ticketSvg}
           alt="Ticket Background"
@@ -410,7 +410,7 @@ const Step3 = ({
                lg:w-[50%] w-full mt-2 max-w-full
                text-white p-4 mx-auto"
           >
-            <div className=" outline-[#24A0B5] rounded-xl outline outline-2 lg:w-[20rem] md:w-[25rem] w-full p-2 text-center bg-[#08343C]">
+            <div className=" outline-[#24A0B5] rounded-xl outline outline-2 lg:w-[20rem] md: w-full p-2 text-center bg-[#08343C]">
               <h1 className="font-road md:font-bold md:text-3xl font-semibold text-2xl py-2">
                 Techember Fest "22
               </h1>
@@ -431,22 +431,22 @@ const Step3 = ({
                 <table className="table-fixed border-collapse border border-[#133D44] w-full text-left rounded-2xl">
                   <tbody>
                     <tr>
-                      <td className="border border-[#133D44] font-semibold md:px-2 p-6 py-3 w-1/2">
-                        <p className="text-white/30 font-normal">Name</p>
+                      <td className="border border-[#133D44] font-semibold md:text-base text-xs px-2 py-3 w-1/2">
+                        <p className="text-white/30 md:font-normal text-xs md:text-base">Name</p>
                         <span className="break-words">{name || "N/A"}</span>
                       </td>
-                      <td className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-1/2">
-                        <p className="text-white/30 font-normal">Email</p>
-                        <span className="break-words">{email || "N/A"}</span>
+                      <td className="border border-[#133D44] font-semibold md:text-base text-xs px-2 py-3 w-1/2">
+                        <p className="text-white/30 md:font-normal text-xs md:text-base">Email</p>
+                        <span className="md:text-base  break-words">{email || "N/A"}</span>
                       </td>
                     </tr>
                     <tr>
-                      <td className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-1/2">
-                        <p className="text-white/30 font-normal">Ticket type</p>
+                      <td className="border border-[#133D44] font-semibold md:text-base text-xs px-2 py-3 w-1/2">
+                        <p className="text-white/30 md:font-normal text-xs md:text-base">Ticket type</p>
                         <span>{ticketType?.name || "N/A"}</span>
                       </td>
-                      <td className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-1/2">
-                        <p className="text-white/30 font-normal">
+                      <td className="border border-[#133D44] font-semibold md:text-base text-xs px-2 py-3 w-1/2">
+                        <p className="text-white/30 md:font-normal text-xs md:text-base">
                           Ticket for :
                         </p>
                         <span>{ticketNumber || "N/A"}</span>
@@ -455,7 +455,7 @@ const Step3 = ({
                   </tbody>
                 </table>
                 <div className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-full text-left">
-                  <p className="text-white/30 font-normal">Special Request?</p>
+                  <p className="text-white/30 md:font-normal text-xs md:text-base">Special Request?</p>
                   <span className="text-xs">{request || "N/A"}</span>
                 </div>
               </div>
