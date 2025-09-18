@@ -128,7 +128,7 @@ const Step1 = ({
         </select>
       </div>
 
-      <div className="mt-8 flex flex-row justify-between gap-x-2">
+      <div className="mt-8 flex md:flex-row flex-col justify-between gap-2">
         <Button
           className={
             "w-full bg-[#08252B] border-[#24A0B5] hover:bg-[#24A0B5] p-6 hover:text-white font-light text-lg text-[#24A0B5] rounded"
@@ -221,7 +221,7 @@ const Step2 = ({
               <img
                 src={imageUrl}
                 alt="Uploaded"
-                className="h-full w-full object-cover rounded-xl"
+                className="h-inherit w-inherit object-cover rounded-xl"
               />
             ) : (
               <div onClick={handleClick}>
@@ -284,7 +284,7 @@ const Step2 = ({
           ></textarea>
         </fieldset>
       </form>
-      <div className="mt-6 flex flex-row justify-between gap-x-2">
+      <div className="mt-6 flex md:flex-row flex-col justify-between gap-x-2">
         <Button
           onClick={() => setStep(0)}
           className={
@@ -327,21 +327,21 @@ const Step3 = ({
         Check your email for a copy or you can <strong>download</strong>
       </p>
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden min-h-screen">
         <img
           src={ticketSvg}
           alt="Ticket Background"
-          className="w-full h-screen"
+          className="hidden md:flex md:w-full h-screen"
         />
 
         {/* Text on top of it */}
         <div className="h-full absolute inset-0">
           <div
             className="flex flex-col items-center justify-center
-               w-[70%] md:w-[50%] mt-4 max-w-full
+               w-[95%] md:w-[50%] mt-4 max-w-full
                text-white p-4 mx-auto"
           >
-            <div className=" outline-[#24A0B5] rounded-xl  outline outline-2 h-[70%] p-2 text-center">
+            <div className=" outline-[#24A0B5] rounded-xl  outline outline-2 md:h-[70%] p-2 text-center">
               <h1 className="font-road font-bold text-3xl py-2">
                 Techember Fest "22
               </h1>
@@ -359,31 +359,31 @@ const Step3 = ({
                 )}
               </div>
               <div className="m-2 bg-[#08343C] rounded-2xl">
-                <table className="table-fixed border-collapse border border-[#133D44] w-full text-left rounded-2x">
+                <table className="table-fixed border-collapse border border-[#133D44] w-full text-left rounded-2xl">
                   <tbody>
                     <tr>
-                      <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
+                      <td className="border border-[#133D44] font-semibold px-1 py-3 w-1/2">
                         <p className="text-white/30 text-sm">Name</p>
-                        <span>{name || "N/A"}</span>
+                        <span className="break-words">{name || "N/A"}</span>
                       </td>
-                      <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
+                      <td className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-1/2">
                         <p className="text-white/30 text-sm">Email</p>
-                        <span className=" text-wrap">{email || "N/A"}</span>
+                        <span className="break-words">{email || "N/A"}</span>
                       </td>
                     </tr>
                     <tr>
-                      <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
+                      <td className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-1/2">
+                        <p className="text-white/30 text-sm">Ticket for :</p>
+                        <span>{ticketType?.name || "N/A"}</span>
+                      </td>
+                      <td className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-1/2">
                         <p className="text-white/30 text-sm">Ticket for :</p>
                         <span>{ticketNumber || "N/A"}</span>
-                      </td>
-                      <td className="border border-[#133D44] font-semibold px-2 py-3 w-1/2">
-                        <p className="text-white/30 text-sm">Price</p>
-                        <span>{ticketType?.price || "N/A"}</span>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <div className="border border-[#133D44] font-semibold px-2 py-3 w-full">
+                <div className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-full">
                   <p className="text-white/30 text-sm">Special Request</p>
                   <span className="text-xs">{request || "N/A"}</span>
                 </div>
@@ -397,7 +397,7 @@ const Step3 = ({
           ></div>
         </div>
       </div>
-      <div className="mt-6 flex flex-row justify-between gap-x-2">
+      <div className="mt-6 flex md:flex-row flex-col justify-between gap-2">
         <Button
           onClick={() => setStep(0)}
           className={
