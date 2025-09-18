@@ -404,7 +404,7 @@ const Step3 = ({
         />
 
         {/* Text on top of it */}
-        <div ref={ticketRef} className="h-full absolute inset-0">
+        <div ref={ticketRef} className="absolute inset-0">
           <div
             className="flex flex-col items-center justify-center
                lg:w-[50%] w-full mt-2 max-w-full
