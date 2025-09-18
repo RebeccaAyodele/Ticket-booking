@@ -407,11 +407,11 @@ const Step3 = ({
         <div ref={ticketRef} className="h-full absolute inset-0">
           <div
             className="flex flex-col items-center justify-center
-               w-[95%] lg:w-[50%] md:w-[100%] mt-2 max-w-full
+               lg:w-[50%] w-full mt-2 max-w-full
                text-white p-4 mx-auto"
           >
-            <div className=" outline-[#24A0B5] rounded-xl outline outline-2 md:h-[70%] w-[20rem] p-2 text-center bg-[#08343C]">
-              <h1 className="font-road font-bold text-3xl py-2">
+            <div className=" outline-[#24A0B5] rounded-xl outline outline-2 lg:w-[20rem] md:w-[25rem] w-full p-2 text-center bg-[#08343C]">
+              <h1 className="font-road md:font-bold md:text-3xl font-semibold text-2xl py-2">
                 Techember Fest "22
               </h1>
               <p>📍 04 Rumens road, Ikoyi, Lagos</p>

@@ -15,6 +15,13 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      screens: {
+      sm: "500px",   // new mobile breakpoint
+      md: "900px",   // slightly higher than default 768px
+      lg: "1100px",  // adjust as needed
+      xl: "1400px",
+      "2xl": "1600px",
+    },
       colors: {},
     },
   },
