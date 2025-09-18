@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import TicketOptions from "./TicketOptions";
 import Icon from "@/svg-folder/Icon";
 import ticketSvg from "@/svg-folder/Subtract.svg";
+import BarCode from "@/svg-folder/Bar Code.svg";
 import { TicketType } from "./TicketOptions";
 import html2canvas from "html2canvas";
 
@@ -403,13 +404,13 @@ const Step3 = ({
         />
 
         {/* Text on top of it */}
-        <div  ref={ticketRef} className="h-full absolute inset-0">
+        <div ref={ticketRef} className="h-full absolute inset-0">
           <div
             className="flex flex-col items-center justify-center
-               w-[95%] lg:w-[50%] mt-2 max-w-full
+               w-[95%] lg:w-[50%] md:w-[100%] mt-2 max-w-full
                text-white p-4 mx-auto"
           >
-            <div className=" outline-[#24A0B5] rounded-xl outline outline-2 md:h-[70%] p-2 text-center bg-[#08343C]">
+            <div className=" outline-[#24A0B5] rounded-xl outline outline-2 md:h-[70%] w-[20rem] p-2 text-center bg-[#08343C]">
               <h1 className="font-road font-bold text-3xl py-2">
                 Techember Fest "22
               </h1>
@@ -445,7 +446,9 @@ const Step3 = ({
                         <span>{ticketType?.name || "N/A"}</span>
                       </td>
                       <td className="border border-[#133D44] font-semibold md:px-2 md:py-3 p-6 w-1/2">
-                        <p className="text-white/30 font-normal">Ticket for :</p>
+                        <p className="text-white/30 font-normal">
+                          Ticket for :
+                        </p>
                         <span>{ticketNumber || "N/A"}</span>
                       </td>
                     </tr>
@@ -460,9 +463,11 @@ const Step3 = ({
           </div>
           <div
             className="flex flex-col items-center justify-center
-               h-[14%] mt-4 md:w-[48%] max-w-full
-               text-white p-4 mx-auto outline-[#24A0B5] rounded-xl outline outline-2"
-          ></div>
+               mt-4
+               text-white p-4 mx-auto lg:w-[48%] w-[90%]"
+          >
+            <img src={BarCode} alt="bar code" />
+          </div>
         </div>
       </div>
       <div className="mt-6 flex md:flex-row flex-col justify-between gap-2">
