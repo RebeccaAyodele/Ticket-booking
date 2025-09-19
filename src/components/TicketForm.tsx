@@ -415,7 +415,7 @@ const Step3 = ({
                 Techember Fest "22
               </h1>
               <p>📍 04 Rumens road, Ikoyi, Lagos</p>
-              <p>📅 March 15, 2025 | 7:00 PM</p>
+              <p>📅 March 15, 2025 | 7:00 PM</p> 
               <div className="w-[200px] h-[200px] mx-auto my-4">
                 {imageUrl ? (
                   <img
