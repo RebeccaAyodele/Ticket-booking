@@ -137,8 +137,8 @@ const Step1 = ({
     setStep(1);
   };
   return (
-    <div className="w-[95%] h-[95%] bg-[#08252B] mx-auto mt-8 rounded-3xl outline outline-[#0E464F] outline-1 md:p-6 py-6 px-2">
-      <div className="bg-gradient-to-br from-[#07373F] to-[#0A0C11] outline outline-1 outline-[#07373F] text-white text-center rounded-2xl md:p-12 p-4">
+    <div className="w-[95%] h-[95%] bg-[#08252B] mx-auto mt-8 rounded-3xl outline outline-[#0E464F] outline-1 p-6">
+      <div className="bg-gradient-to-br from-[#07373F] to-[#0A0C11] outline outline-1 outline-[#07373F] text-white text-center rounded-2xl md:p-12 py-4 px-2">
         <div>
           <h1 className="font-road font-bold tracking-tighter md:text-5xl text-2xl text py-2">
             Techember Fest "25
@@ -463,7 +463,7 @@ const Step3 = ({
           <div
             className="flex flex-col items-center justify-center
                md:mt-6
-               text-white p-4 mx-auto lg:w-[48%] w-[90%]"
+               text-white p-4 mx-auto lg:w-[48%] w-[60%]"
           >
             <img src={BarCode} alt="bar code" />
           </div>
