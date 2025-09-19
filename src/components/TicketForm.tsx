@@ -389,10 +389,10 @@ const Step3 = ({
   };
   return (
     <div className="md:p-6 mt-8">
-      <h1 className="md:text-3xl text-xl font-semibold text-center">
+      <h1 className="md:text-3xl text-2xl font-semibold text-center">
         Your Ticket is Booked!
       </h1>
-      <p className="text-center md:text-base text-xs md:my-4 mb-4">
+      <p className="text-center md:text-base text-sm md:my-4 mb-4">
         Check your email for a copy or you can <strong>download</strong>
       </p>
 
@@ -464,7 +464,7 @@ const Step3 = ({
           <div
             className="flex flex-col items-center justify-center
                mt-4
-               text-white p-4 mx-auto lg:w-[48%] w-[90%]"
+               text-white p-4 mx-auto lg:w-[48%] w-[90%] bg-[#08343C]"
           >
             <img src={BarCode} alt="bar code" />
           </div>
