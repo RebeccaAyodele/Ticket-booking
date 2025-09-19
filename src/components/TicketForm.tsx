@@ -137,17 +137,17 @@ const Step1 = ({
     setStep(1);
   };
   return (
-    <div className="w-[95%] h-[95%] bg-[#08252B] mx-auto mt-8 rounded-3xl outline outline-[#0E464F] outline-1 p-6">
+    <div className="w-[95%] h-[95%] bg-[#08252B] mx-auto mt-8 rounded-3xl outline outline-[#0E464F] outline-1 md:p-6 py-6 px-2">
       <div className="bg-gradient-to-br from-[#07373F] to-[#0A0C11] outline outline-1 outline-[#07373F] text-white text-center rounded-2xl md:p-12 p-4">
         <div>
-          <h1 className="font-road font-bold md:text-5xl text-2xl text py-2">
+          <h1 className="font-road font-bold tracking-tighter md:text-5xl text-2xl text py-2">
             Techember Fest "25
           </h1>
           <p className="md:text-base text-sm">Join us for an unforgettable experience at</p>
           <p className="md:text-base text-sm">[Event Name]| Secure your spot now</p>
         </div>
-        <div>
-          <p>📍 [Event Location] || March 15, 2025 | 7:00 PM</p>
+        <div className="mt-4">
+          <p className="md:text-base text-sm">📍 [Event Location] || March 15, 2025 | 7:00 PM</p>
         </div>
       </div>
 
@@ -375,9 +375,9 @@ const Step3 = ({
     if (!ticketRef.current) return;
 
     const canvas = await html2canvas(ticketRef.current, {
-      useCORS: true, // allow external images like Cloudinary
+      useCORS: true,
       allowTaint: true,
-      backgroundColor: null, // keep transparency if any
+      backgroundColor: "#052228",
     });
 
     const dataUrl = canvas.toDataURL("image/jpg");
